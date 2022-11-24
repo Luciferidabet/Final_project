@@ -42,7 +42,7 @@
 				</div>
 				<div class="col-12 col-md d-flex justify-content-md-end">
 					<p class="mb-0">Mở của từ thứ Hai đến Chủ Nhật</p>
-
+        </div>
           <div class=" right-content mg-left">
             <c:if test="${sessionScope.acc == null}">
                 <a href="./signIn-signUp.jsp" class="avatar">
@@ -56,8 +56,7 @@
                 </a>
             </c:if>
           </div>
-          </div>
-				</div>
+        				</div>
 			</div>
 		</div>
 
