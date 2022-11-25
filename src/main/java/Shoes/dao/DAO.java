@@ -30,7 +30,7 @@ public class DAO {
         List<Product> list = new ArrayList<>();
         String query = "select *\n" +
                         "FROM product\n" +
-                        "WHERE product.enable = 1";  
+                        "WHERE enable = 1";  
 
         try {
             conn = new DBContext().getConnection();
@@ -81,11 +81,12 @@ public class DAO {
 //                "where category_id = ? and enable=?";
 
         String query = "SELECT * FROM product\n" +
-                "where category_id = ? and enable=?";
+                "where enable = 1 and category_id = ?";
         try {
             conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, category_id);
+            //ps.setString(1, enable);
             rs = ps.executeQuery();
 
             while(rs.next()){
@@ -110,12 +111,13 @@ public class DAO {
 
 
         String query = "select *\n" +
-                        "FROM product\n";
+                        "FROM product\n"+
+                        "Where category_id = ?";
 
         try {
             conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
-            ps.setString(1, category_id);
+            ps.setString(1,category_id);
             rs = ps.executeQuery();
 
             while(rs.next()){

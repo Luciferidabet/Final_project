@@ -12,10 +12,10 @@ public class DBContext {
     /*USE BELOW METHOD FOR YOUR DATABASE CONNECTION FOR BOTH SINGLE AND MULTILPE SQL SERVER INSTANCE(s)*/
     /*DO NOT EDIT THE BELOW METHOD, YOU MUST USE ONLY THIS ONE FOR YOUR DATABASE CONNECTION*/
      public Connection getConnection()throws Exception {
-        String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName+"?reconnect=true";
+        String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName;
         if(instance == null || instance.trim().isEmpty())
-            connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName+"?reconnect=true";
-        Class.forName("com.mysql.jdbc.Driver");
+            connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName;
+        Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(connectionURL, userID, password);
     }
 //      public String getImagePath() throws Exception {
