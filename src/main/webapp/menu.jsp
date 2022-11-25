@@ -42,23 +42,23 @@
                                 </div>
                                 <div class="col-12 col-md d-flex justify-content-md-end">
                                         <p class="mb-0">Mở của từ thứ Hai đến Chủ Nhật</p>
-                                        <div class=" right-content mg-left">
-                                                <c:if test="${sessionScope.acc == null}">
+                                </div>
+                                <div class=" right-content mg-left">
+
+                                        <c:if test="${sessionScope.acc == null}">
                                                     <a href="./signIn-signUp.jsp" class="avatar">
                                                         <img src="images/test-image.jpg" alt="" class="avatar-img">
                                                     </a>
-                                                </c:if>
+                                        </c:if>
                             
-                                                <c:if test="${sessionScope.acc != null}">
+                                        <c:if test="${sessionScope.acc != null}">
                                                     <a href="./user-profile.jsp" class="avatar">
                                                         <img src="images/test-image.jpg" alt="" class="avatar-img">
                                                     </a>
-                                                </c:if>
-                                            </div>
-                                </div>
+                                        </c:if>
+                                        </div>
                         </div>
                 </div>
-
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
